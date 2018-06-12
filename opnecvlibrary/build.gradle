@@ -1,0 +1,21 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion Integer.parseInt(project.CompileSdkVersion)
+    buildToolsVersion project.BuildToolsVersion
+
+    defaultConfig {
+        minSdkVersion Integer.parseInt(project.MinSdkVersion)
+        targetSdkVersion Integer.parseInt(project.TargetSdkVersion)
+        versionCode Integer.parseInt(project.VersionCode)
+        versionName project.VersionName
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+}
